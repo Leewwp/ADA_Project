@@ -1,0 +1,37 @@
+# Data files (large, can be regenerated)
+data/*.csv
+
+# Models (can be retrained)
+models/*.pkl
+
+# Reports (generated)
+report/*.csv
+report/*.png
+report/figures/*.png
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

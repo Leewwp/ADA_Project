@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd C:/Users/16278/Desktop/file/code/project/hongkong_aqi_prediction && python src/02_preprocessing.py)",
+      "Bash(cd C:/Users/16278/Desktop/file/code/project/hongkong_aqi_prediction && python src/03_feature_engineering.py)",
+      "Bash(cd C:/Users/16278/Desktop/file/code/project/hongkong_aqi_prediction && python src/08_model_optimization.py)",
+      "Bash(cd C:/Users/16278/Desktop/file/code/project/hongkong_aqi_prediction && python src/09_final_evaluation.py)",
+      "Bash(cd C:/Users/16278/Desktop/file/code/project/hongkong_aqi_prediction && python src/02_preprocessing.py && python src/03_feature_engineering.py)"
+    ]
+  }
+}

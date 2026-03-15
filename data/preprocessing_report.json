@@ -1,0 +1,200 @@
+{
+  "run_timestamp_utc": "2026-03-15T12:29:51Z",
+  "input_file": "C:\\Users\\16278\\Desktop\\file\\code\\project\\hongkong_aqi_prediction\\src\\..\\data\\raw_aqi_data.csv",
+  "output_file": "C:\\Users\\16278\\Desktop\\file\\code\\project\\hongkong_aqi_prediction\\src\\..\\data\\processed_aqi_data.csv",
+  "load_report": {
+    "input_file": "C:\\Users\\16278\\Desktop\\file\\code\\project\\hongkong_aqi_prediction\\src\\..\\data\\raw_aqi_data.csv",
+    "loaded_records": 17544,
+    "duplicates_removed": 0
+  },
+  "input_summary": {
+    "records": 17544,
+    "column_count": 11,
+    "date_start": "2024-01-01T00:00:00",
+    "date_end": "2025-12-31T23:00:00",
+    "duplicate_timestamps": 0,
+    "total_missing_values": 0,
+    "missing_by_column": {},
+    "negative_numeric_values": 0
+  },
+  "missing_summary_before_processing": {},
+  "processing_steps": {
+    "missing_values": {
+      "method": "time_interpolation_then_ffill_bfill",
+      "missing_before": 0,
+      "missing_after": 0
+    },
+    "outliers": {
+      "mode": "flag_only",
+      "reason": "Pollution spikes may represent real air-quality episodes, so they are preserved by default.",
+      "columns_reviewed": [
+        "pm2_5",
+        "pm10",
+        "nitrogen_dioxide",
+        "ozone",
+        "surface_pressure"
+      ],
+      "details": {
+        "pm2_5": {
+          "count": 1020,
+          "percentage": 5.81,
+          "lower_bound": -14.55,
+          "upper_bound": 69.05,
+          "min": 2.7,
+          "p01": 8.1,
+          "p99": 119.2,
+          "max": 249.6
+        },
+        "pm10": {
+          "count": 898,
+          "percentage": 5.12,
+          "lower_bound": -13.65,
+          "upper_bound": 82.75,
+          "min": 2.8,
+          "p01": 10.1,
+          "p99": 129.285,
+          "max": 249.6
+        },
+        "nitrogen_dioxide": {
+          "count": 529,
+          "percentage": 3.02,
+          "lower_bound": -15.1,
+          "upper_bound": 116.9,
+          "min": 8.2,
+          "p01": 17.743,
+          "p99": 134.457,
+          "max": 203.0
+        },
+        "ozone": {
+          "count": 441,
+          "percentage": 2.51,
+          "lower_bound": -53.5,
+          "upper_bound": 126.5,
+          "min": 0.0,
+          "p01": 0.0,
+          "p99": 148.0,
+          "max": 264.0
+        },
+        "surface_pressure": {
+          "count": 59,
+          "percentage": 0.34,
+          "lower_bound": 990.55,
+          "upper_bound": 1030.15,
+          "min": 977.0,
+          "p01": 994.3,
+          "p99": 1024.4,
+          "max": 1029.2
+        }
+      }
+    },
+    "infinity_values": {
+      "infinity_values_found": 0,
+      "infinity_values_remaining": 0
+    },
+    "physical_bounds": {}
+  },
+  "distribution_snapshot": {
+    "before_processing": {
+      "pm2_5": {
+        "min": 2.7,
+        "p01": 8.1,
+        "p25": 16.8,
+        "median": 25.3,
+        "p75": 37.7,
+        "p99": 119.2,
+        "max": 249.6
+      },
+      "pm10": {
+        "min": 2.8,
+        "p01": 10.1,
+        "p25": 22.5,
+        "median": 31.8,
+        "p75": 46.6,
+        "p99": 129.285,
+        "max": 249.6
+      },
+      "nitrogen_dioxide": {
+        "min": 8.2,
+        "p01": 17.743,
+        "p25": 34.4,
+        "median": 47.9,
+        "p75": 67.4,
+        "p99": 134.457,
+        "max": 203.0
+      },
+      "ozone": {
+        "min": 0.0,
+        "p01": 0.0,
+        "p25": 14.0,
+        "median": 33.0,
+        "p75": 59.0,
+        "p99": 148.0,
+        "max": 264.0
+      },
+      "surface_pressure": {
+        "min": 977.0,
+        "p01": 994.3,
+        "p25": 1005.4,
+        "median": 1009.8,
+        "p75": 1015.3,
+        "p99": 1024.4,
+        "max": 1029.2
+      }
+    },
+    "after_processing": {
+      "pm2_5": {
+        "min": 2.7,
+        "p01": 8.1,
+        "p25": 16.8,
+        "median": 25.3,
+        "p75": 37.7,
+        "p99": 119.2,
+        "max": 249.6
+      },
+      "pm10": {
+        "min": 2.8,
+        "p01": 10.1,
+        "p25": 22.5,
+        "median": 31.8,
+        "p75": 46.6,
+        "p99": 129.285,
+        "max": 249.6
+      },
+      "nitrogen_dioxide": {
+        "min": 8.2,
+        "p01": 17.743,
+        "p25": 34.4,
+        "median": 47.9,
+        "p75": 67.4,
+        "p99": 134.457,
+        "max": 203.0
+      },
+      "ozone": {
+        "min": 0.0,
+        "p01": 0.0,
+        "p25": 14.0,
+        "median": 33.0,
+        "p75": 59.0,
+        "p99": 148.0,
+        "max": 264.0
+      },
+      "surface_pressure": {
+        "min": 977.0,
+        "p01": 994.3,
+        "p25": 1005.4,
+        "median": 1009.8,
+        "p75": 1015.3,
+        "p99": 1024.4,
+        "max": 1029.2
+      }
+    }
+  },
+  "output_validation": {
+    "records": 17544,
+    "date_start": "2024-01-01T00:00:00",
+    "date_end": "2025-12-31T23:00:00",
+    "missing_values": 0,
+    "duplicate_timestamps": 0,
+    "negative_numeric_values": 0
+  }
+}

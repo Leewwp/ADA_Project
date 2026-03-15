@@ -1,0 +1,90 @@
+{
+  "run_timestamp_utc": "2026-03-15T11:59:55Z",
+  "mode_requested": "sample",
+  "source_mode": "sample_generator",
+  "fallback_to_sample": false,
+  "location": {
+    "name": "Hong Kong",
+    "latitude": 22.2855,
+    "longitude": 114.1577
+  },
+  "timezone": "Asia/Hong_Kong",
+  "requested_date_range": {
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31",
+    "months_per_chunk": null
+  },
+  "source_urls": {},
+  "aqi_variables": [
+    "pm2_5",
+    "pm10",
+    "nitrogen_dioxide",
+    "ozone"
+  ],
+  "weather_variables": [
+    "temperature_2m",
+    "relative_humidity_2m",
+    "wind_speed_10m",
+    "wind_direction_10m",
+    "surface_pressure",
+    "precipitation",
+    "cloud_cover"
+  ],
+  "chunk_reports": [],
+  "weather_synthetic_fill": {
+    "used": true,
+    "filled_cells": 122808,
+    "filled_by_column": {
+      "temperature_2m": 17544,
+      "relative_humidity_2m": 17544,
+      "wind_speed_10m": 17544,
+      "wind_direction_10m": 17544,
+      "surface_pressure": 17544,
+      "precipitation": 17544,
+      "cloud_cover": 17544
+    },
+    "missing_before_fill": {
+      "temperature_2m": 17544,
+      "relative_humidity_2m": 17544,
+      "wind_speed_10m": 17544,
+      "wind_direction_10m": 17544,
+      "surface_pressure": 17544,
+      "precipitation": 17544,
+      "cloud_cover": 17544
+    },
+    "missing_after_fill": {
+      "temperature_2m": 0,
+      "relative_humidity_2m": 0,
+      "wind_speed_10m": 0,
+      "wind_direction_10m": 0,
+      "surface_pressure": 0,
+      "precipitation": 0,
+      "cloud_cover": 0
+    }
+  },
+  "raw_data_summary": {
+    "records": 17544,
+    "column_count": 11,
+    "columns": [
+      "pm2_5",
+      "pm10",
+      "nitrogen_dioxide",
+      "ozone",
+      "temperature_2m",
+      "relative_humidity_2m",
+      "wind_speed_10m",
+      "wind_direction_10m",
+      "surface_pressure",
+      "precipitation",
+      "cloud_cover"
+    ],
+    "date_start": "2024-01-01T00:00:00",
+    "date_end": "2025-12-31T23:00:00",
+    "duplicate_timestamps": 0,
+    "total_missing_values": 0,
+    "missing_by_column": {}
+  },
+  "notes": [
+    "This dataset is synthetic and is intended only for debugging or offline walkthroughs."
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "run_timestamp_utc": "2026-03-15T12:17:57Z",
+  "mode_requested": "live",
+  "source_mode": "live_api",
+  "fallback_to_sample": false,
+  "location": {
+    "name": "Hong Kong",
+    "latitude": 22.2855,
+    "longitude": 114.1577
+  },
+  "timezone": "Asia/Hong_Kong",
+  "requested_date_range": {
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31",
+    "months_per_chunk": 6
+  },
+  "source_urls": {
+    "air_quality_api": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "weather_api": "https://archive-api.open-meteo.com/v1/archive"
+  },
+  "aqi_variables": [
+    "pm2_5",
+    "pm10",
+    "nitrogen_dioxide",
+    "ozone"
+  ],
+  "weather_variables": [
+    "temperature_2m",
+    "relative_humidity_2m",
+    "wind_speed_10m",
+    "wind_direction_10m",
+    "surface_pressure",
+    "precipitation",
+    "cloud_cover"
+  ],
+  "chunk_reports": [
+    {
+      "start_date": "2024-01-01",
+      "end_date": "2024-06-30",
+      "aqi_fetch": {
+        "success": true,
+        "attempts": 1,
+        "status_code": 200,
+        "error": null
+      },
+      "weather_fetch": {
+        "success": true,
+        "attempts": 1,
+        "status_code": 200,
+        "error": null
+      },
+      "aqi_records": 4368,
+      "weather_records": 4368
+    },
+    {
+      "start_date": "2024-07-01",
+      "end_date": "2024-12-31",
+      "aqi_fetch": {
+        "success": true,
+        "attempts": 1,
+        "status_code": 200,
+        "error": null
+      },
+      "weather_fetch": {
+        "success": true,
+        "attempts": 1,
+        "status_code": 200,
+        "error": null
+      },
+      "aqi_records": 4416,
+      "weather_records": 4416
+    },
+    {
+      "start_date": "2025-01-01",
+      "end_date": "2025-06-30",
+      "aqi_fetch": {
+        "success": true,
+        "attempts": 1,
+        "status_code": 200,
+        "error": null
+      },
+      "weather_fetch": {
+        "success": true,
+        "attempts": 1,
+        "status_code": 200,
+        "error": null
+      },
+      "aqi_records": 4344,
+      "weather_records": 4344
+    },
+    {
+      "start_date": "2025-07-01",
+      "end_date": "2025-12-31",
+      "aqi_fetch": {
+        "success": true,
+        "attempts": 1,
+        "status_code": 200,
+        "error": null
+      },
+      "weather_fetch": {
+        "success": true,
+        "attempts": 1,
+        "status_code": 200,
+        "error": null
+      },
+      "aqi_records": 4416,
+      "weather_records": 4416
+    }
+  ],
+  "weather_synthetic_fill": {
+    "missing_before_fill": {
+      "temperature_2m": 0,
+      "relative_humidity_2m": 0,
+      "wind_speed_10m": 0,
+      "wind_direction_10m": 0,
+      "surface_pressure": 0,
+      "precipitation": 0,
+      "cloud_cover": 0
+    },
+    "missing_after_fill": {
+      "temperature_2m": 0,
+      "relative_humidity_2m": 0,
+      "wind_speed_10m": 0,
+      "wind_direction_10m": 0,
+      "surface_pressure": 0,
+      "precipitation": 0,
+      "cloud_cover": 0
+    },
+    "used": false,
+    "filled_cells": 0,
+    "filled_by_column": {
+      "temperature_2m": 0,
+      "wind_speed_10m": 0,
+      "wind_direction_10m": 0,
+      "relative_humidity_2m": 0,
+      "surface_pressure": 0,
+      "precipitation": 0,
+      "cloud_cover": 0
+    }
+  },
+  "raw_data_summary": {
+    "records": 17544,
+    "column_count": 11,
+    "columns": [
+      "pm2_5",
+      "pm10",
+      "nitrogen_dioxide",
+      "ozone",
+      "temperature_2m",
+      "relative_humidity_2m",
+      "wind_speed_10m",
+      "wind_direction_10m",
+      "surface_pressure",
+      "precipitation",
+      "cloud_cover"
+    ],
+    "date_start": "2024-01-01T00:00:00",
+    "date_end": "2025-12-31T23:00:00",
+    "duplicate_timestamps": 0,
+    "total_missing_values": 0,
+    "missing_by_column": {}
+  },
+  "notes": [
+    "AQI values are sourced from the air-quality API; only weather gaps may be filled with synthetic proxy values.",
+    "Sample data is never used unless explicitly requested from the command line."
+  ]
+}

@@ -143,7 +143,7 @@ def evaluate_models():
     # Random Forest
     from sklearn.ensemble import RandomForestRegressor
     rf = RandomForestRegressor(n_estimators=200, max_depth=12, min_samples_split=10,
-                              min_samples_leaf=5, n_jobs=-1, random_state=42)
+                              min_samples_leaf=5, n_jobs=1, random_state=42)
     rf.fit(X_train, y_train)
     pred = rf.predict(X_test)
     metrics = calculate_metrics(y_test, pred)
@@ -168,7 +168,7 @@ def evaluate_models():
     try:
         from xgboost import XGBRegressor
         xgb_model = XGBRegressor(n_estimators=300, max_depth=6, learning_rate=0.05,
-                           subsample=0.8, colsample_bytree=0.8, random_state=42, verbosity=0)
+                           subsample=0.8, colsample_bytree=0.8, n_jobs=1, random_state=42, verbosity=0)
         xgb_model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
         pred = xgb_model.predict(X_test)
         metrics = calculate_metrics(y_test, pred)
@@ -185,7 +185,7 @@ def evaluate_models():
     try:
         import lightgbm as lgb
         lgbm_model = lgb.LGBMRegressor(n_estimators=300, num_leaves=31, learning_rate=0.05,
-                                       subsample=0.8, colsample_bytree=0.8, random_state=42, verbose=-1)
+                                       subsample=0.8, colsample_bytree=0.8, n_jobs=1, random_state=42, verbose=-1)
         lgbm_model.fit(X_train, y_train, eval_set=[(X_val, y_val)])
         pred = lgbm_model.predict(X_test)
         metrics = calculate_metrics(y_test, pred)

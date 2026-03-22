@@ -255,7 +255,7 @@ def train_random_forest(X_train, y_train, X_val, y_val):
     }
 
     # Base model
-    rf = RandomForestRegressor(n_jobs=-1, random_state=42)
+    rf = RandomForestRegressor(n_jobs=1, random_state=42)
 
     # RandomizedSearchCV with 30 iterations
     search = RandomizedSearchCV(
@@ -263,7 +263,7 @@ def train_random_forest(X_train, y_train, X_val, y_val):
         n_iter=30,
         cv=3,
         scoring='neg_root_mean_squared_error',
-        n_jobs=-1,
+        n_jobs=1,
         random_state=42,
         verbose=0
     )
@@ -322,7 +322,7 @@ def train_xgboost(X_train, y_train, X_val, y_val):
 
     # Base model with early stopping
     base_xgb = XGBRegressor(
-        n_jobs=-1,
+        n_jobs=1,
         random_state=42,
         verbosity=0,
         early_stopping_rounds=50
@@ -334,7 +334,7 @@ def train_xgboost(X_train, y_train, X_val, y_val):
         n_iter=30,
         cv=3,
         scoring='neg_root_mean_squared_error',
-        n_jobs=-1,
+        n_jobs=1,
         random_state=42,
         verbose=0
     )
@@ -379,7 +379,7 @@ def train_lightgbm(X_train, y_train, X_val, y_val):
         'reg_alpha': 0.1,
         'reg_lambda': 1.0,
         'verbose': -1,
-        'n_jobs': -1,
+        'n_jobs': 1,
         'random_state': 42
     }
 

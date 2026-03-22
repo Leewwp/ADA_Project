@@ -102,6 +102,7 @@ python src/02_preprocessing.py
 python src/03_feature_engineering.py
 python src/04_models.py
 python src/09_final_evaluation.py
+python src/10_report_visualization.py
 python src/07_forecast.py
 ```
 
@@ -190,6 +191,22 @@ The latest saved evaluation results currently rank the models roughly as:
 The exact metrics in use are stored in:
 
 - `report/evaluation_results.csv`
+
+For report-ready model-effect figures, run:
+
+```bash
+python src/10_report_visualization.py
+```
+
+This writes:
+
+- `report/model_predictions_test.csv`
+- `report/best_model_feature_importance.csv`
+- `report/figures/best_model_prediction_overview.png`
+- `report/figures/best_model_actual_vs_predicted.png`
+- `report/figures/best_model_residual_diagnostics.png`
+- `report/figures/best_model_feature_importance.png`
+- `report/figures/ensemble_weights.png`
 
 ## Known Gaps
 

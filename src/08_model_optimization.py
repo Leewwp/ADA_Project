@@ -140,7 +140,7 @@ def select_features(df: pd.DataFrame, n_features: int = 40) -> List[str]:
     # Method 3: Random Forest importance
     # ============================================
     print("[3/3] Computing Random Forest importance...")
-    rf = RandomForestRegressor(n_estimators=100, max_depth=10, n_jobs=-1, random_state=42)
+    rf = RandomForestRegressor(n_estimators=100, max_depth=10, n_jobs=1, random_state=42)
     rf.fit(X, y)
 
     rf_importance = pd.DataFrame({
@@ -300,7 +300,7 @@ def train_xgboost_tuned(X_train, y_train, X_val, y_val):
         min_child_weight=5,
         reg_alpha=0.5,
         reg_lambda=1.0,
-        n_jobs=-1,
+        n_jobs=1,
         random_state=42,
         verbosity=0
     )
@@ -464,7 +464,7 @@ def optimize_all():
         max_depth=10,
         min_samples_split=10,
         min_samples_leaf=5,
-        n_jobs=-1,
+        n_jobs=1,
         random_state=42
     )
     rf.fit(X_train, y_train)

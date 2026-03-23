@@ -8,6 +8,10 @@ models/*.pkl
 report/*.csv
 report/*.png
 report/figures/*.png
+report/figures.zip
+
+# Temporary directories
+tmp/
 
 # Jupyter
 .ipynb_checkpoints/
@@ -19,8 +23,9 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
+.venv/
 venv/
+env/
 ENV/
 
 # IDE

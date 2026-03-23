@@ -1,5 +1,7 @@
 # Hong Kong AQI Short-Term Prediction
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Overview
 
 This project predicts short-term air-quality trends in Hong Kong with Python.
